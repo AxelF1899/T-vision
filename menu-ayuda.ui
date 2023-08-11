@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>221</width>
+    <height>319</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>221</width>
+    <height>319</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>221</width>
+    <height>319</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QFrame" name="frame">
+     <property name="minimumSize">
+      <size>
+       <width>221</width>
+       <height>319</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>221</width>
+       <height>319</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+border-color: rgba(3, 239, 254, 1);
+border-style: solid;
+border-radius: 10;
+border-width: 2px;
+background-color: rgba(170, 169, 162, 0);
+font:75 10pt &quot;Myanmar Text&quot;;
+font: bold;
+color: rgb(3,239,254);
+}
+
+QPushButton:hover{
+background-color:rgba(3, 239, 254, 0.4);
+font:75 10pt &quot;Myanmar Text&quot;;
+font: bold;
+color: rgb(3,239,254);
+}
+QFrame{
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(47, 92, 147, 255), stop:1 rgba(26, 0, 31, 255));
+border-style: solid;
+border-width: 3px;
+border-color: rgb(85, 255, 255);
+border-radius: 25;
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QPushButton" name="pushButton_ayuda_2">
+        <property name="text">
+         <string>Manual de usuario</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../../Downloads/ayuda.png</normaloff>../../Downloads/ayuda.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>20</width>
+          <height>20</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_acercade_2">
+        <property name="text">
+         <string>Acerca de</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../../Downloads/acerca-de.png</normaloff>../../Downloads/acerca-de.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_regresar_2">
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>Regresar</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../../Downloads/regresar.png</normaloff>../../Downloads/regresar.png</iconset>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
