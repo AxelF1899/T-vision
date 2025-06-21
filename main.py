@@ -269,7 +269,6 @@ class hilo(QThread):
 
 
     def run(self):
-# ***********************   variables para la detección automática y ajuste del frame en qt
         cap = cv2.VideoCapture(0)
         grabar = False
         deteccion_tiempo_detenido = None
@@ -277,57 +276,61 @@ class hilo(QThread):
         SEGUNDOS_DESPUES_DETECTADO = 3
         fourcc = cv2.VideoWriter_fourcc('M', 'P', '4', '2')
         frame_size = (int(cap.get(3)), int(cap.get(4)))
+        out = None  # Inicializar out como None al principio
 
-#**********************************************************
         self.hilo_corriendo = True
 
         faces_casc = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
         bodies_casc = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_fullbody.xml")
-        while self.hilo_corriendo:
-            ret, frame = cap.read()
-#***************************************bloque de grabación automática y conversión al frame de qt
 
-            Image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+        try:
+            while self.hilo_corriendo:
+                ret, frame = cap.read()
+                if not ret:
+                    break
 
-            flip = cv2.flip(Image, 1)
-            convertir_QT = QImage(flip.data, flip.shape[1], flip.shape[0], QImage.Format_RGB888)
-            pic = convertir_QT.scaled(744, 500, Qt.KeepAspectRatio)
+                Image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+                flip = cv2.flip(Image, 1)
+                convertir_QT = QImage(flip.data, flip.shape[1], flip.shape[0], QImage.Format_RGB888)
+                pic = convertir_QT.scaled(744, 500, Qt.KeepAspectRatio)
 
+                cara = faces_casc.detectMultiScale(Image, 1.3, 5)
+                cuerpo = bodies_casc.detectMultiScale(Image, 1.3, 5)
 
-            cara = faces_casc.detectMultiScale(Image, 1.3, 5)
-            cuerpo = bodies_casc.detectMultiScale(Image, 1.3, 5)
-
-
-            if len(cara) + len(cuerpo) > 0:
-                if grabar:
-                    inicio_timer = False
-                else:
-                    grabar = True
-                    tiempo_Actual = datetime.datetime.now().strftime("%d-%m-%Y-%H-%M-%S")
-                    out = cv2.VideoWriter(f"{tiempo_Actual}.avi", fourcc, 20, frame_size)
-
-                    print("Inicio de la grabación")
-            elif grabar:
-                if inicio_timer:
-                    if time.time() - deteccion_tiempo_detenido >= SEGUNDOS_DESPUES_DETECTADO:
-                        grabar = False
+                if len(cara) + len(cuerpo) > 0:
+                    if grabar:
                         inicio_timer = False
-                        out.release()
-                        print("Grabación detenida")
-                else:
-                    inicio_timer = True
-                    deteccion_tiempo_detenido = time.time()
+                    else:
+                        grabar = True
+                        tiempo_Actual = datetime.datetime.now().strftime("%d-%m-%Y-%H-%M-%S")
+                        out = cv2.VideoWriter(f"{tiempo_Actual}.avi", fourcc, 20, frame_size)
+                        print("Inicio de la grabación")
+                elif grabar:
+                    if inicio_timer:
+                        if time.time() - deteccion_tiempo_detenido >= SEGUNDOS_DESPUES_DETECTADO:
+                            grabar = False
+                            inicio_timer = False
+                            if out is not None:  # Verificar antes de liberar
+                                out.release()
+                                out = None
+                            print("Grabación detenida")
+                    else:
+                        inicio_timer = True
+                        deteccion_tiempo_detenido = time.time()
 
-            if grabar:
-                out.write(frame)
-            if cv2.waitKey(1) == ord('q'):
-                break
+                if grabar and out is not None:
+                    out.write(frame)
 
+                if cv2.waitKey(1) == ord('q'):
+                    break
 
-            self.Imageupd.emit(pic)
+                self.Imageupd.emit(pic)
 
-        out.release()
-        cap.release()
+        finally:
+            # Liberar recursos de manera segura
+            if out is not None:
+                out.release()
+            cap.release()
 
     def stop(self):
         self.hilo_corriendo = False

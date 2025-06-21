@@ -87,7 +87,7 @@ font: bold;
 color: rgb(85, 255, 255);</string>
          </property>
          <property name="text">
-          <string>T-Vision</string>
+          <string>AUVIS</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignHCenter|Qt::AlignTop</set>
@@ -121,7 +121,7 @@ border-radius:20;
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../../Downloads/salir 2.1.png</normaloff>../../Downloads/salir 2.1.png</iconset>
+           <normaloff>./icons/cerrar.png</normaloff>./icons/cerrar.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -211,7 +211,7 @@ border-radius:20;
               </property>
               <property name="icon">
                <iconset>
-                <normaloff>../../Downloads/informacion.png</normaloff>../../Downloads/informacion.png</iconset>
+                <normaloff>./icons/informacion.png</normaloff>./icons/informacion.png</iconset>
               </property>
               <property name="iconSize">
                <size>
@@ -255,7 +255,7 @@ border-radius:20;
               </property>
               <property name="icon">
                <iconset>
-                <normaloff>../../Downloads/folder.png</normaloff>../../Downloads/folder.png</iconset>
+                <normaloff>./icons/folder.png</normaloff>./icons/folder.png</iconset>
               </property>
               <property name="iconSize">
                <size>
@@ -299,7 +299,7 @@ border-radius:20;
               </property>
               <property name="icon">
                <iconset>
-                <normaloff>../../Downloads/exit.png</normaloff>../../Downloads/exit.png</iconset>
+                <normaloff>./icons/salir.png</normaloff>./icons/salir.png</iconset>
               </property>
               <property name="iconSize">
                <size>
@@ -442,7 +442,7 @@ border-radius:20;
                </property>
                <property name="icon">
                 <iconset>
-                 <normaloff>../../Downloads/camara-de-video.png</normaloff>../../Downloads/camara-de-video.png</iconset>
+                 <normaloff>./icons/iniciar_camara</normaloff>./icons/iniciar_camara</iconset>
                </property>
                <property name="iconSize">
                 <size>
@@ -497,7 +497,7 @@ border-radius:20;
                </property>
                <property name="icon">
                 <iconset>
-                 <normaloff>../../Downloads/cuadrado.png</normaloff>../../Downloads/cuadrado.png</iconset>
+                 <normaloff>./icons/detener</normaloff>./icons/detener</iconset>
                </property>
                <property name="iconSize">
                 <size>

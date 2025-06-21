@@ -1,0 +1,41 @@
+# Entornos virtuales
+.venv/
+venv/
+
+# Configuración de PyCharm / IntelliJ IDEA
+.idea/
+
+# Archivos compilados de Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Archivos temporales y backups
+*.log
+*.bak
+*.tmp
+*.swp
+*.swo
+*.~*
+
+# Archivos de base de datos o binarios (si los llegaras a generar)
+*.db
+*.sqlite3
+*.dat
+*.pkl
+
+# Archivos UI compilados
+*.pyc
+
+# Archivos generados automáticamente
+requirements.txt
+
+# Imágenes, solo si son generadas o temporales
+*.png
+
+# Archivos de entorno personal
+.env
+.env.*
+
+# Jupyter Notebooks checkpoint
+.ipynb_checkpoints/

@@ -75,7 +75,7 @@ QPushButton:hover{
 background-color:rgba(3, 239, 254, 0.4);
 font:75 10pt &quot;Myanmar Text&quot;;
 font: bold;
-color: rgb(3,239,254);
+color: #03EFFE;
 }</string>
       </property>
       <property name="text">
@@ -83,7 +83,7 @@ color: rgb(3,239,254);
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>../../Downloads/ayuda 2.0.png</normaloff>../../Downloads/ayuda 2.0.png</iconset>
+        <normaloff>./icons/informacion.png</normaloff>./icons/informacion.png</iconset>
       </property>
       <property name="iconSize">
        <size>
@@ -119,7 +119,7 @@ color: rgb(3,239,254);
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>../../Downloads/salir 2.1.png</normaloff>../../Downloads/salir 2.1.png</iconset>
+        <normaloff>./icons/cerrar.png</normaloff>./icons/cerrar.png</iconset>
       </property>
       <property name="iconSize">
        <size>
@@ -161,7 +161,7 @@ color: rgb(3,239,254);
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>../../Downloads/perfil-del-usuario (1).png</normaloff>../../Downloads/perfil-del-usuario (1).png</iconset>
+        <normaloff>./icons/avatar.png</normaloff>./icons/avatar.png</iconset>
       </property>
       <property name="shortcut">
        <string>Return</string>
@@ -184,7 +184,7 @@ border: none;</string>
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../Downloads/circuito-cerrado-de-television.png</pixmap>
+       <pixmap>./icons/cctv.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>

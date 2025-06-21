@@ -84,7 +84,7 @@ border-radius: 25;</string>
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../Documents/1 mdv.png</pixmap>
+       <pixmap>./icons/inicio_sesion.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -134,7 +134,7 @@ border: none;</string>
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Tenemos una ventana que brinda una amigable interfaz con el usuario, en orden descendiente, podemos visualizar los primeros dos botones, en la esquina superior derecha encontraremos un atajo al cierre del sistema y se representa por el símbolo &amp;quot;X&amp;quot;, por el otro lado, en la esquina superior izquierda tenemos el botón de ayuda, donde encontraremos una cantidad de sugerencias y respuestas a nuestras dudas respecto al programa en caso de necesitarlas podemos visualizarlo con el símbolo &amp;quot;?&amp;quot;. Más adelante encontraremos dos campos de validación ordenados de manera vertical, el primero tiene la finalidad de abarcar el parámetro de usuario y el segundo el de contraseña, finalmente, los datos que llenan los campos de texto son sometidos a una validación para poder acceder a las demás funciones del sistema en caso de que estos sean llenados de manera correcta,y esta se logra con el botón denominado &amp;quot;Iniciar sesión&amp;quot;, localizado al final de la ventana.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Tenemos una ventana que brinda una amigable interfaz con el usuario, en orden descendiente, podemos visualizar los primeros dos botones, en la esquina superior derecha encontraremos un atajo al cierre del sistema y se representa por el símbolo &amp;quot;X&amp;quot;, por el otro lado, en la esquina superior izquierda tenemos el botón de ayuda, donde encontraremos una cantidad de sugerencias y respuestas a nuestras dudas respecto al programa en caso de necesitarlas podemos visualizarlo con el símbolo &amp;quot;¡&amp;quot;. Más adelante encontraremos dos campos de validación ordenados de manera vertical, el primero tiene la finalidad de abarcar el parámetro de usuario y el segundo el de contraseña, finalmente, los datos que llenan los campos de texto son sometidos a una validación para poder acceder a las demás funciones del sistema en caso de que estos sean llenados de manera correcta,y esta se logra con el botón denominado &amp;quot;Iniciar sesión&amp;quot;, localizado al final de la ventana.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QFrame" name="frame_2">
@@ -183,7 +183,7 @@ border: none;
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../../Downloads/flecha-izquierda.png</normaloff>../../Downloads/flecha-izquierda.png</iconset>
+           <normaloff>./icons/anterior.png</normaloff>./icons/anterior.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -200,7 +200,7 @@ border: none;
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../../Downloads/flecha-correcta.png</normaloff>../../Downloads/flecha-correcta.png</iconset>
+           <normaloff>./icons/siguiente.png</normaloff>./icons/siguiente.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -217,7 +217,7 @@ border: none;
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../../Downloads/regresar.png</normaloff>../../Downloads/regresar.png</iconset>
+           <normaloff>./icons/regresar.png</normaloff>./icons/regresar.png</iconset>
          </property>
         </widget>
        </item>
