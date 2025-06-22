@@ -44,6 +44,11 @@ class login(QWidget):
         self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         self.show()
+        
+        self.btn_salir.setIcon(QIcon(resource_path("icons/cerrar.png")))
+        self.btn_ayuda.setIcon(QIcon(resource_path("icons/informacion.png")))
+        self.btn_login.setIcon(QIcon(resource_path("icons/avatar.png")))
+        self.lbl_icono.setPixmap(QPixmap(resource_path("icons/cctv.png")))
 
         # agrgando funcionalidad a los botones
         self.btn_salir.clicked.connect(lambda: self.close())
@@ -156,6 +161,13 @@ class mainmenu(QWidget):
         self.btn_grabar.clicked.connect(self.video)
         self.btn_detener.clicked.connect(self.detener)
         self.btn_grabaciones.clicked.connect(self.xplorer)
+        
+        self.btn_salirm.setIcon(QIcon(resource_path("icons/cerrar.png")))
+        self.btn_ayudam.setIcon(QIcon(resource_path("icons/informacion.png")))
+        self.btn_grabaciones.setIcon(QIcon(resource_path("icons/folder.png")))
+        self.btn_cerrarSesion.setIcon(QIcon(resource_path("icons/salir.png")))
+        self.btn_grabar.setIcon(QIcon(resource_path("icons/iniciar_camara.png")))  
+        self.btn_detener.setIcon(QIcon(resource_path("icons/detener.png"))) 
 
         self.hilo = None
 
@@ -257,6 +269,11 @@ class menuAyuda(QWidget):
         self.pushButton_regresar_2.clicked.connect(self.backToLogin)
         self.pushButton_acercade_2.clicked.connect(self.acerca)
         self.pushButton_ayuda_2.clicked.connect(self.manualusuario)
+        
+        # Sobrescribir todos los íconos
+        self.pushButton_ayuda_2.setIcon(QIcon(resource_path("icons/manual_usuario.png")))
+        self.pushButton_acercade_2.setIcon(QIcon(resource_path("icons/informacion.png")))
+        self.pushButton_regresar_2.setIcon(QIcon(resource_path("icons/regresar.png")))
 
     def backToLogin(self):
         self.close()
@@ -288,6 +305,15 @@ class acercaDe(QWidget):
         self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         self.pushButton_aceptar.clicked.connect(self.regresar)
+        
+        # Cargar la imagen del logo
+        logo_pixmap = QPixmap(resource_path("icons/auvis.webp"))
+        self.label.setPixmap(logo_pixmap.scaled(
+            self.label.width(), 
+            self.label.height(),
+            Qt.KeepAspectRatio,
+            Qt.SmoothTransformation
+        ))
 
     def regresar(self):
         self.close()
@@ -305,7 +331,7 @@ class ManualUser1(QWidget):
         # Corregir las rutas de íconos antes de cargar
         if getattr(sys, 'frozen', False):
             fix_ui_icon_paths(ui_path)
-            
+        
         uic.loadUi(ui_path, self)
         self.setWindowTitle("Manual de usuario")
         self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
@@ -314,6 +340,20 @@ class ManualUser1(QWidget):
         self.btn_salirManual.clicked.connect(lambda: self.close())
         self.btn_siguiente.clicked.connect(self.next2)
         self.btn_anterior.clicked.connect(self.back3)
+        
+        # Sobrescribir todos los íconos
+        self.btn_anterior.setIcon(QIcon(resource_path("icons/anterior.png")))
+        self.btn_siguiente.setIcon(QIcon(resource_path("icons/siguiente.png")))
+        self.btn_salirManual.setIcon(QIcon(resource_path("icons/regresar.png")))
+        
+        # Cargar la imagen de inicio de sesión
+        inicio_pixmap = QPixmap(resource_path("icons/inicio_sesion.png"))
+        self.label.setPixmap(inicio_pixmap.scaled(
+            self.label.width(), 
+            self.label.height(),
+            Qt.KeepAspectRatio,
+            Qt.SmoothTransformation
+        ))
 
     def next2(self):
         self.close()
@@ -345,6 +385,20 @@ class ManualUser2(QWidget):
         self.btn_cerrarAyuda.clicked.connect(lambda: self.close())
         self.btn_siguiente2.clicked.connect(self.next3)
         self.btn_volver1.clicked.connect(self.back1)
+        
+        # Sobrescribir todos los íconos
+        self.btn_volver1.setIcon(QIcon(resource_path("icons/anterior.png")))
+        self.btn_siguiente2.setIcon(QIcon(resource_path("icons/siguiente.png")))
+        self.btn_cerrarAyuda.setIcon(QIcon(resource_path("icons/regresar.png")))
+        
+        # Cargar la imagen de inicio de sesión
+        inicio_pixmap = QPixmap(resource_path("icons/principal.png"))
+        self.label.setPixmap(inicio_pixmap.scaled(
+            self.label.width(), 
+            self.label.height(),
+            Qt.KeepAspectRatio,
+            Qt.SmoothTransformation
+        ))
 
     def back1(self):
         self.close()
@@ -376,6 +430,20 @@ class ManualUser3(QWidget):
         self.btn_cerrarAyuda3.clicked.connect(lambda: self.close())
         self.btn_siguiente3.clicked.connect(self.next1)
         self.btn_anterior3.clicked.connect(self.back2)
+        
+        # Sobrescribir todos los íconos
+        self.btn_anterior3.setIcon(QIcon(resource_path("icons/anterior.png")))
+        self.btn_siguiente3.setIcon(QIcon(resource_path("icons/siguiente.png")))
+        self.btn_cerrarAyuda3.setIcon(QIcon(resource_path("icons/regresar.png")))
+        
+        # Cargar la imagen de inicio de sesión
+        inicio_pixmap = QPixmap(resource_path("icons/grabaciones.png"))
+        self.label.setPixmap(inicio_pixmap.scaled(
+            self.label.width(), 
+            self.label.height(),
+            Qt.KeepAspectRatio,
+            Qt.SmoothTransformation
+        ))
 
     def back2(self):
         self.close()
