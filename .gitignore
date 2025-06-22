@@ -39,3 +39,6 @@ requirements.txt
 
 # Jupyter Notebooks checkpoint
 .ipynb_checkpoints/
+
+build/
+dist/
