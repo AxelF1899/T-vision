@@ -95,7 +95,7 @@ border-radius: 25;
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>./icons/manual_usuario.png</normaloff>./icons/manual_usuario.png</iconset>
+          <normaloff>../icons/manual_usuario.png</normaloff>../icons/manual_usuario.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -112,7 +112,7 @@ border-radius: 25;
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>./icons/informacion.png</normaloff>./icons/informacion.png</iconset>
+          <normaloff>../icons/informacion.png</normaloff>../icons/informacion.png</iconset>
         </property>
        </widget>
       </item>
@@ -129,7 +129,7 @@ border-radius: 25;
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>./icons/regresar.png</normaloff>./icons/regresar.png</iconset>
+          <normaloff>../icons/regresar.png</normaloff>../icons/regresar.png</iconset>
         </property>
        </widget>
       </item>

@@ -25,7 +25,7 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <layout class="QHBoxLayout" name="horizontalLayout">
+  <layout class="QVBoxLayout" name="verticalLayout">
    <property name="spacing">
     <number>0</number>
    </property>
@@ -71,10 +71,10 @@ border-radius: 25;</string>
      <widget class="QLabel" name="label">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>70</y>
-        <width>171</width>
-        <height>241</height>
+        <x>30</x>
+        <y>100</y>
+        <width>291</width>
+        <height>171</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -84,7 +84,7 @@ border-radius: 25;</string>
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>./icons/inicio_sesion.png</pixmap>
+       <pixmap>../icons/grabaciones.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -108,33 +108,28 @@ border: none;</string>
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:600; color:#ffffff;&quot;&gt;1.-Inicio de sesión&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:600; color:#ffffff;&quot;&gt;3.-Visualización de grabaciones&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QTextBrowser" name="textBrowser_2">
       <property name="geometry">
        <rect>
-        <x>300</x>
-        <y>80</y>
-        <width>421</width>
-        <height>211</height>
+        <x>360</x>
+        <y>90</y>
+        <width>351</width>
+        <height>192</height>
        </rect>
       </property>
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-       </font>
-      </property>
       <property name="styleSheet">
-       <string notr="true">color: white;
-border: none;</string>
+       <string notr="true">border: none;
+color: white;</string>
       </property>
       <property name="html">
        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Tenemos una ventana que brinda una amigable interfaz con el usuario, en orden descendiente, podemos visualizar los primeros dos botones, en la esquina superior derecha encontraremos un atajo al cierre del sistema y se representa por el símbolo &amp;quot;X&amp;quot;, por el otro lado, en la esquina superior izquierda tenemos el botón de ayuda, donde encontraremos una cantidad de sugerencias y respuestas a nuestras dudas respecto al programa en caso de necesitarlas podemos visualizarlo con el símbolo &amp;quot;¡&amp;quot;. Más adelante encontraremos dos campos de validación ordenados de manera vertical, el primero tiene la finalidad de abarcar el parámetro de usuario y el segundo el de contraseña, finalmente, los datos que llenan los campos de texto son sometidos a una validación para poder acceder a las demás funciones del sistema en caso de que estos sean llenados de manera correcta,y esta se logra con el botón denominado &amp;quot;Iniciar sesión&amp;quot;, localizado al final de la ventana.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;La interfaz pertenece al explorador de archivos predeterminado de sistemas Windows, y es aquí donde se ubican las grabaciones llevadas a cabo por la cámara, tendremos distintas herramientas que nos darán la facultad para administrar, estos archivos, ya sea para borrarlos o moverlos de lugar. De igual forma nos da la capacidad de  reproducirlos mediante un programa reproductor de video.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QFrame" name="frame_2">
@@ -177,13 +172,13 @@ border: none;
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_2">
        <item>
-        <widget class="QPushButton" name="btn_anterior">
+        <widget class="QPushButton" name="btn_anterior3">
          <property name="text">
           <string/>
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>./icons/anterior.png</normaloff>./icons/anterior.png</iconset>
+           <normaloff>../icons/anterior.png</normaloff>../icons/anterior.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -194,13 +189,13 @@ border: none;
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="btn_siguiente">
+        <widget class="QPushButton" name="btn_siguiente3">
          <property name="text">
           <string/>
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>./icons/siguiente.png</normaloff>./icons/siguiente.png</iconset>
+           <normaloff>../icons/siguiente.png</normaloff>../icons/siguiente.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -211,13 +206,13 @@ border: none;
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="btn_salirManual">
+        <widget class="QPushButton" name="btn_cerrarAyuda3">
          <property name="text">
           <string>Regresar</string>
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>./icons/regresar.png</normaloff>./icons/regresar.png</iconset>
+           <normaloff>../icons/regresar.png</normaloff>../icons/regresar.png</iconset>
          </property>
         </widget>
        </item>

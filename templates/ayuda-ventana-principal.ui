@@ -84,7 +84,7 @@ border-radius: 25;</string>
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>./icons/principal.png</pixmap>
+       <pixmap>../icons/principal.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -136,7 +136,7 @@ border: none;
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>./icons/anterior.png</normaloff>./icons/anterior.png</iconset>
+           <normaloff>../icons/anterior.png</normaloff>../icons/anterior.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -153,7 +153,7 @@ border: none;
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>./icons/siguiente.png</normaloff>./icons/siguiente.png</iconset>
+           <normaloff>../icons/siguiente.png</normaloff>../icons/siguiente.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -170,7 +170,7 @@ border: none;
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>./icons/regresar.png</normaloff>./icons/regresar.png</iconset>
+           <normaloff>../icons/regresar.png</normaloff>../icons/regresar.png</iconset>
          </property>
         </widget>
        </item>

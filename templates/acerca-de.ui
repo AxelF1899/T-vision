@@ -141,7 +141,7 @@ color: rgb(3,239,254);
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>./icons/auvis.webp</pixmap>
+       <pixmap>../icons/auvis.webp</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
