@@ -1,18 +1,44 @@
 from functools import partial
 from PyQt5.QtWidgets import *
 from PyQt5 import uic, QtCore
-import time, datetime, cv2, sys
+import time, datetime, cv2, sys, os
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtMultimedia import *
 from PyQt5.QtMultimediaWidgets import *
 from pathlib import Path
 
+def fix_ui_icon_paths(ui_file):
+    """Reemplaza las rutas ../icons/ por icons/ en los archivos .ui"""
+    with open(ui_file, 'r', encoding='utf-8') as f:
+        content = f.read()
+    
+    content = content.replace('../icons/', 'icons/')
+    
+    with open(ui_file, 'w', encoding='utf-8') as f:
+        f.write(content)
+
+def resource_path(relative_path):
+    """Obtiene la ruta absoluta al recurso, funciona para desarrollo y para PyInstaller"""
+    if hasattr(sys, '_MEIPASS'):
+        # Ruta temporal creada por PyInstaller
+        base_path = Path(sys._MEIPASS)
+    else:
+        # Ruta normal durante el desarrollo
+        base_path = Path(".")
+    
+    return str(base_path / relative_path)
 class login(QWidget):
     def __init__(self):
         super(login, self).__init__()
-        # importando archivo .ui
-        uic.loadUi("./templates/Login-form.ui", self)
+        # Ruta al archivo UI
+        ui_path = resource_path("templates/Login-form.ui")
+        
+        # Corregir las rutas de íconos antes de cargar
+        if getattr(sys, 'frozen', False):
+            fix_ui_icon_paths(ui_path)
+            
+        uic.loadUi(ui_path, self)
         # *******************************Configurar ventana***********************************************
         self.setWindowTitle("Inicio de sesión")
         self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
@@ -59,7 +85,14 @@ class login(QWidget):
 class videorec(QWidget):
     def __init__(self):
         super(videorec, self).__init__()
-        uic.loadUi("./templates/videoReader.ui", self)
+        # Ruta al archivo UI
+        ui_path = resource_path("templates/videoReader.ui")
+        
+        # Corregir las rutas de íconos antes de cargar
+        if getattr(sys, 'frozen', False):
+            fix_ui_icon_paths(ui_path)
+            
+        uic.loadUi(ui_path, self)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         self.setup()
         self.makeConnections()
@@ -102,7 +135,14 @@ class videorec(QWidget):
 class mainmenu(QWidget):
     def __init__(self):
         super(mainmenu, self).__init__()
-        uic.loadUi("./templates/mainmenu-form.ui", self)
+        # Ruta al archivo UI
+        ui_path = resource_path("templates/mainmenu-form.ui")
+        
+        # Corregir las rutas de íconos antes de cargar
+        if getattr(sys, 'frozen', False):
+            fix_ui_icon_paths(ui_path)
+            
+        uic.loadUi(ui_path, self)
         self.setWindowTitle("AUVIS")
         self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
@@ -203,7 +243,14 @@ class menuAyuda(QWidget):
     def __init__(self):
         super(menuAyuda, self).__init__()
         # importando archivo .ui
-        uic.loadUi("./templates/menu-ayuda.ui", self)
+        # Ruta al archivo UI
+        ui_path = resource_path("templates/menu-ayuda.ui")
+        
+        # Corregir las rutas de íconos antes de cargar
+        if getattr(sys, 'frozen', False):
+            fix_ui_icon_paths(ui_path)
+            
+        uic.loadUi(ui_path, self)
         self.setWindowTitle("Ayuda")
         self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
@@ -229,7 +276,14 @@ class acercaDe(QWidget):
     def __init__(self):
         super(acercaDe, self).__init__()
         # importando archivo .ui
-        uic.loadUi("./templates/acerca-de.ui", self)
+        # Ruta al archivo UI
+        ui_path = resource_path("templates/acerca-de.ui")
+        
+        # Corregir las rutas de íconos antes de cargar
+        if getattr(sys, 'frozen', False):
+            fix_ui_icon_paths(ui_path)
+            
+        uic.loadUi(ui_path, self)
         self.setWindowTitle("Acerca de")
         self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
@@ -245,7 +299,14 @@ class ManualUser1(QWidget):
     def __init__(self):
         super(ManualUser1, self).__init__()
         # importando archivo .ui
-        uic.loadUi("./templates/ayuda-inicio-sesion.ui", self)
+        # Ruta al archivo UI
+        ui_path = resource_path("templates/ayuda-inicio-sesion.ui")
+        
+        # Corregir las rutas de íconos antes de cargar
+        if getattr(sys, 'frozen', False):
+            fix_ui_icon_paths(ui_path)
+            
+        uic.loadUi(ui_path, self)
         self.setWindowTitle("Manual de usuario")
         self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
@@ -269,7 +330,14 @@ class ManualUser2(QWidget):
     def __init__(self):
         super(ManualUser2, self).__init__()
         # importando archivo .ui
-        uic.loadUi("./templates/ayuda-ventana-principal.ui", self)
+        # Ruta al archivo UI
+        ui_path = resource_path("templates/ayuda-ventana-principal.ui")
+        
+        # Corregir las rutas de íconos antes de cargar
+        if getattr(sys, 'frozen', False):
+            fix_ui_icon_paths(ui_path)
+            
+        uic.loadUi(ui_path, self)
         self.setWindowTitle("Manual de usuario")
         self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
@@ -293,7 +361,14 @@ class ManualUser3(QWidget):
     def __init__(self):
         super(ManualUser3, self).__init__()
         # importando archivo .ui
-        uic.loadUi("./templates/ayuda-grabaciones.ui", self)
+        # Ruta al archivo UI
+        ui_path = resource_path("templates/ayuda-grabaciones.ui")
+        
+        # Corregir las rutas de íconos antes de cargar
+        if getattr(sys, 'frozen', False):
+            fix_ui_icon_paths(ui_path)
+            
+        uic.loadUi(ui_path, self)
         self.setWindowTitle("Manual de usuario")
         self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
