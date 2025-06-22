@@ -427,7 +427,7 @@ class hilo(QThread):
 # inicializando la ventana
 app = QApplication(sys.argv)
 
-app.setWindowIcon(QIcon("tvision.png"))
+app.setWindowIcon(QIcon("icon.png"))
 
 window = login()
 app.exec_()
